@@ -3,13 +3,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Purple Unicorns RULE THE WORLD!!!'
+	print("Purple Unicorns RULE THE WORLD!!! \n")
+    return "<a href='/on'>Turn Warmer ON</a> or <a href='/off'>Turn Warmer OFF</a>"
 
 @app.route('/on')
 def get_on():
 	return "Warmer ON <a href='/off'>Turn Warmer OFF</a> <a href='/''>Return to Main</a>"
 
 @app.route('/off')
+def get_off():
 	return "Warmer OFF <a href='/on'>Turn Warmer ON</a> <a href='/''>Return to Main</a>"
 
 if __name__ == '__main__':
