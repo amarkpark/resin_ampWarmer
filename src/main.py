@@ -7,10 +7,10 @@ status = f.read()
 f.close()
 
 @app.route('/')
-def hello_world():
+def index():
 	print url_for('on')
 	print url_for('off')
-    return status
+	return print status
 
 @app.route('/on')
 def on():
@@ -21,4 +21,4 @@ def off():
 	return "Warmer OFF"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+	app.run(host='0.0.0.0', port=80)
