@@ -10,7 +10,7 @@ f.close()
 def index():
 	print url_for('on')
 	print url_for('off')
-	return print status
+	return status
 
 @app.route('/on')
 def on():
