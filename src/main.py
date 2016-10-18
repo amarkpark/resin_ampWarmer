@@ -2,7 +2,7 @@ from flask import Flask, url_for
 app = Flask(__name__)
 
 # Grab the contents of a file
-f = open('status.txt', 'rU')
+f = open('./status.txt', 'rU')
 status = f.read()
 f.close()
 
