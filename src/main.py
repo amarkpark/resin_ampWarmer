@@ -1,8 +1,9 @@
+import sys
 from flask import Flask, url_for
 app = Flask(__name__)
 
 # Grab the contents of a file
-f = open('static/status.txt', 'rU')
+f = open('./static/status.txt', 'rU')
 status = f.read()
 f.close()
 
