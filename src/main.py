@@ -1,9 +1,16 @@
-from flask import Flask
+from flask import Flask, url_for
 app = Flask(__name__)
+
+# Grab the contents of a file
+f = open('status.txt', 'rU')
+status = f.read()
+f.close()
 
 @app.route('/')
 def hello_world():
-    return "Purple Unicorns RULE THE WORLD!!!"
+	print url_for('on')
+	print url_for('off')
+    return status
 
 @app.route('/on')
 def on():
