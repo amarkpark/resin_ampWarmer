@@ -1,22 +1,10 @@
-import sys
 import os
-from flask import Flask, url_for
+from flask import Flask
 app = Flask(__name__)
-# app.config['WORKDIR'] = WORKDIR
-
-# ALLOWED_EXTENSIONS = set('txt')
-
-# # Grab the contents of a file
-# def get_status(filename)
-# 	with open(WORKDIR/filename, 'rU') as f:
-# 		status = f.read()
-# 		f.close()	
 
 @app.route('/')
 def index():
-	print url_for('on')
-	print url_for('off')
-	return url_for('static', filename='status.txt')
+	return os.getenv('TFTD', 'Purple Unicorns RULE THE WORLD!!!')
 
 @app.route('/on')
 def on():
